@@ -1,0 +1,3 @@
+Book_Type,From_City,To_City,Buffer1,Buffer2,Total_Cost,Passenger,Hotel_Name
+Flight,London Stansted (STN),Barcelona (BCN),,,USD100.00,David,N/A
+Flight + Hotel,London Stansted (STN),Barcelona (BCN),,,USD100.00,David,Superior Hotel
