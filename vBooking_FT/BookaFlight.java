@@ -11,6 +11,10 @@ import com.rational.test.ft.object.interfaces.generichtmlsubdomain.*;
 import com.rational.test.ft.script.*;
 import com.rational.test.ft.value.*;
 import com.rational.test.ft.vp.*;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
 /**
  * Description   : Functional Test Script
@@ -35,7 +39,11 @@ public class BookaFlight extends BookaFlightHelper
 		label_flight().click();
 		list_flyingfrom().select(dpString("fromCity"));
 		list_flyingto().select(dpString("toCity"));
-		text_from().setText(dpString("fromDate"));
+		
+		String pattern = "dd/MM/yyyy";
+		String fromDate = new SimpleDateFormat(pattern).format(new Date());
+		text_from().setText(fromDate);
+
 		button_searcHsubmit().click();
 		sleep(10);
 		list_passengerSelector().select(dpString("passenger"));
@@ -44,7 +52,7 @@ public class BookaFlight extends BookaFlightHelper
 		button_proceeDsubmit().click();
 		sleep(5);
 		String resNum = (String) html_flightReservationNumber().getProperty(".text");
-		browser_htmlBrowser(document_bookingMade(),DEFAULT_FLAGS).click(atPoint(240,23));
+		browser_htmlBrowser(ANY,MAY_EXIT).close();
 		System.out.println("Flight Reserved for "+fullName+
 				" with Reservation Number#"+resNum+" in flight#"+flight);
 	}

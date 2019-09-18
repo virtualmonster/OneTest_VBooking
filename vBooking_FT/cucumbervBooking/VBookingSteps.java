@@ -26,13 +26,10 @@ import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
  * @author Mayakkannan.r
  */
 
-//@FTCucumberOptions(cucumberOptions = {
-//		"VacationBooking.feature"
-//})
 public class VBookingSteps extends VBookingStepsHelper
 {
 	/**
-	 * Script Name   : <b>VacationBooking</b>
+	 * Script Name   : <b>VBookingSteps</b>
 	 * Generated     : <b>27-Aug-2019 1:56:28 PM</b>
 	 * Description   : Functional Test Script
 	 * Original Host : WinNT Version 10.0  Build 17134 ()
@@ -40,16 +37,8 @@ public class VBookingSteps extends VBookingStepsHelper
 	 * @since  2019/08/27
 	 * @author Mayakkannan.r
 	 */
-//	public void testMain(Object[] args) 
-//	{
-//		// TODO Insert code here
-//	}
-	private Scenario scenario;
-	private static String flight=null, cost=null,resNum=null,passenger=null;
-	
-	@Before
-	public void beforetest(Scenario scenario) {
-		this.scenario =  scenario;
+	public void testMain(Object[] args){ 
+		
 	}
 	
 	@Given("^I Open Vacation Booking Portal$")
@@ -64,14 +53,15 @@ public class VBookingSteps extends VBookingStepsHelper
 		sleep(5);
 	}
 
-	@Then("^I Book a Flight from \"([^\"]*)\" to \"([^\"]*)\" on \"([^\"]*)\" for \"([^\"]*)\"$")
-	public void i_Book_a_Flight_from_to_on_for(String fromCity, String toCity, String fromDate, String passenger) throws Throwable {
+	@Then("^I Book a Flight from \"([^\"]*)\" to \"([^\"]*)\" on \"([^\"]*)\" "
+			+ "for \"([^\"]*)\"$")
+	public void i_Book_a_Flight_from_to_on_for(String fromCity, String toCity, 
+			String fromDate, String passenger) throws Throwable {
+		
 		label_flight().click();
 		list_flyingfrom().select(fromCity);
 		list_flyingto().select(toCity);
 		text_from().setText(fromDate);
-//		image_gh_demo_calendar().hover(2);
-//		table_htmlTable_0().click(atCell(atColumn(0), atRow(3)));
 		button_searcHsubmit().click();
 		sleep(5);
 		flight = (String) html_flightNumberUI().getProperty(".text");
@@ -81,7 +71,8 @@ public class VBookingSteps extends VBookingStepsHelper
 		button_proceeDsubmit().click();
 		sleep(5);
 		resNum = (String) html_flightReservationNumber().getProperty(".text");
-		scenario.write("Flight "+flight+" is reserved with Number:"+resNum+" at the cost of "+cost);
+		scenario.write("Flight "+flight+" is reserved with Number:"+resNum+" at the "
+				+ "cost of "+cost);
 	}
 
 	@Then("^I Close Portal$")
@@ -96,10 +87,12 @@ public class VBookingSteps extends VBookingStepsHelper
 		link_passengerCheckIn().click();
 		sleep(5);
 		TestObject[] link_flights = browser_htmlBrowser().find(atDescendant(".class","Html.A",".text",flight));
-				((GuiTestObject)link_flights[0]).click();
+		((GuiTestObject)link_flights[0]).click();
+		
 		sleep(5);
 		TestObject[] lnk_resNums = browser_htmlBrowser().find(atDescendant(".class","Html.A",".text", resNum));
-			((GuiTestObject)lnk_resNums[0]).click();
+		((GuiTestObject)lnk_resNums[0]).click();
+		
 		document_passengerCheckin().click(atXpath("//body/div/table/tbody/tr[2]/td/table/tbody/tr[8]/td/input"));
 		button_verifiedbutton().click();
 //		text_apiComment().click(atPoint(99,15));
@@ -168,6 +161,13 @@ public class VBookingSteps extends VBookingStepsHelper
 		sleep(5);
 		scenario.write("Boarded "+passenger.trim()+" with Reservation Number:"+resNum+" in Flight:"+flight);
 	}
-
+	
+	private Scenario scenario;
+	private static String flight=null, cost=null,resNum=null,passenger=null;
+	
+	@Before
+	public void beforetest(Scenario scenario) {
+		this.scenario =  scenario;
+	}
 }
 

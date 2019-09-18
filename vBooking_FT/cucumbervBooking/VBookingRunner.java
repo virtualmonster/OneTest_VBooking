@@ -30,9 +30,8 @@ public class VBookingRunner extends VBookingRunnerHelper
 	 * @since  2019/09/10
 	 * @author Mayakkannan.r
 	 */
-	public void testMain(Object[] args) 
-	{
-		// TODO Insert code here
+	public void testMain(Object[] args) {
+		
 	}
 }
 
