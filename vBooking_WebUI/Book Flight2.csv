@@ -1,3 +1,0 @@
-Book_Type,From_City,To_City,Total_Cost,Passenger,Hotel_Name
-Flight,London Stansted (STN),Edinburgh (EDI),USD100.00,Ling,N/A
-Flight + Hotel,London Stansted (STN),Edinburgh (EDI),USD100.00,Ling,Superior Hotel
