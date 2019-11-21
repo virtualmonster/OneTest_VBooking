@@ -50,7 +50,7 @@ public class BookaFlight extends BookaFlightHelper
 		String flight = (String) html_flightNumberUI().getProperty(".text");
 		String fullName = (String) text_cardholdersname().getProperty(".value");
 		button_proceeDsubmit().click();
-		sleep(5);
+		sleep(10);
 		String resNum = (String) html_flightReservationNumber().getProperty(".text");
 		browser_htmlBrowser(ANY,MAY_EXIT).close();
 		System.out.println("Flight Reserved for "+fullName+

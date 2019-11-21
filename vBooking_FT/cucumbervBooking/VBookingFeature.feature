@@ -6,20 +6,20 @@
 	@Smoke
 	Scenario: Book a Flight
 		Given I Open Vacation Booking Portal
-		Then I Book a Flight from "London Stansted (STN)" to "Edinburgh (EDI)" on "30/09/2019" for "David"
+#		Then I Book a Flight from "London Stansted (STN)" to "Edinburgh (EDI)" on "30/09/2019" for "David"
 		Then I Close Portal
 	
 	@Smoke
 	Scenario: Check-in Passenger
 		Given I Open Vacation Booking Admin Portal
-		Then I Check-in above Passenger
+#		Then I Check-in above Passenger
 		Then I Close Portal
 	
-	@Smoke
-	Scenario: Board the Passenger
-		Given I Open Vacation Booking Admin Portal
-		Then I Board above Passenger with Passport Num "1234567"
-		Then I Close Portal
+#	@Smoke
+#	Scenario: Board the Passenger
+#		Given I Open Vacation Booking Admin Portal
+#		Then I Board above Passenger with Passport Num "1234567"
+#		Then I Close Portal
 	
 #	@Smoke
 #	Scenario: Check-in Passenger with Reservation Number

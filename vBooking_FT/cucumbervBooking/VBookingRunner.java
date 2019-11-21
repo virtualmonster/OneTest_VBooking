@@ -17,7 +17,8 @@ import com.ibm.rational.test.ft.object.interfaces.sapwebportal.*;
  * @author Mayakkannan.r
  */
 @FTCucumberOptions(cucumberOptions = {
-		"cucumbervBooking\\VBookingFeature.feature"
+//		"cucumbervBooking"   							// To run all feature files in a folder
+		"cucumbervBooking\\VBookingFeature.feature"     // To run a specific feature file in a folder
 })
 public class VBookingRunner extends VBookingRunnerHelper
 {
