@@ -1,0 +1,3 @@
+fromCity,toCity,passenger
+[STRING],[STRING],[STRING]
+London Stansted (STN),Edinburgh (EDI),Rohit
