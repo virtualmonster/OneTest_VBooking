@@ -3,10 +3,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="src" output="bin" path="src"/>
-	<classpathentry kind="lib" path="D:/Program Files/HCL/HCLIMShared/plugins/com.ibm.rational.test.lt.codegen.core_7.3.900.v20200612_1429/libraries/httpclient-4.5.6.jar"/>
-	<classpathentry kind="lib" path="D:/Program Files/HCL/HCLIMShared/plugins/com.ibm.rational.test.lt.codegen.core_7.3.900.v20200612_1429/libraries/httpcore-4.4.10.jar"/>
-	<classpathentry kind="lib" path="D:/Program Files/HCL/HCLIMShared/plugins/com.ibm.rational.test.lt.codegen.core_7.3.900.v20200612_1429/libraries/httpmime-4.5.6.jar"/>
-	<classpathentry kind="lib" path="D:/Program Files/HCL/HCLIMShared/plugins/com.ibm.rational.test.lt.codegen.core_7.3.900.v20200612_1429/libraries/slf4j-simple-1.6.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/stuart.walker/HCL/hclonetest/workspace/zippedExtLibs/RPTKHelpers.zip"/>
 	<classpathentry kind="lib" path="C:/Users/stuart.walker/HCL/hclonetest/workspace/zippedExtLibs/mac_msedgedriver.zip"/>
 	<classpathentry kind="lib" path="C:/Users/stuart.walker/HCL/hclonetest/workspace/zippedExtLibs/msedgedriver.zip"/>
